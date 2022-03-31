@@ -19,8 +19,16 @@
 }
 
 @layer components { 
+  .button {
+    @apply font-bold bg-yellow-300 dark:text-black border-b border-black my-2 p-2 text-lg
+  }
+
   .field {
     @apply flex flex-col mb-4;
+  }
+
+  .link {
+    @apply border-b-4 border-yellow-300;
   }
 }
 

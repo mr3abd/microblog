@@ -6,11 +6,11 @@
     <%= form_for Post.new do |form| %>
       <%= form.text_area :body, placeholder: "What's happening?", class: "block w-full h-20" %>
       <div class="flex justify-end">
-      <%= form.submit "> post", class: "font-bold bg-yellow-300 dark:text-black border-b-1 border-black my-2 p-2 text-lg" %>
+      <%= form.submit "> post", class: "button" %>
       </div>
     <% end %>
   <% else %>
-    <%= link_to "login to post", new_user_session_path, class: "bg-yellow-300 dark:text-black font-bold px-1" %>
+    <%= link_to "login to post", new_user_session_path, class: "link" %>
   <% end %>
   </div>
   <div class="space-y-4">
