@@ -2,7 +2,7 @@
   <div class="flex-1">
     <div class="flex items-center justify-between">
       <span class="font-black lowercase"><%= post.user.name %></span>
-      <span class="font-thin text-sm"><%= time_ago_in_words post.created_at %> ago</span>
+      <span class="text-xs"><%= time_ago_in_words post.created_at %> ago</span>
     </div>
     <p><span class="font-black mr-1">&gt;</span><%= line_breaks post.body %></p>
   </div>
