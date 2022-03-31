@@ -6,6 +6,22 @@
   body {
     @apply bg-white dark:bg-black text-black dark:text-white;
   }
+
+  input[type="email"],
+  input[type="text"],
+  input[type="password"], textarea {
+    @apply border-b-4 border-black bg-slate-100 dark:bg-slate-800;
+  }
+
+  label {
+    @apply font-bold lowercase;
+  }
+}
+
+@layer components { 
+  .field {
+    @apply flex flex-col mb-4;
+  }
 }
 
 @layer utilities {

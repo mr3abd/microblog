@@ -15,10 +15,12 @@
   </head>
 
   <body>
-    <% if current_user %>
-      Hello <%= current_user.name %>
-    <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    <div class="px-micro">
+      <% if current_user %>
+        Hello <%= current_user.name %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
     <% end %>
     <%= yield %>
+    </div>
   </body>
 </html>
