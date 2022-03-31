@@ -1,3 +1,19 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-black text-black dark:text-white;
+  }
+}
+
+@layer utilities {
+  .mx-micro { 
+    @apply mx-2;
+  }
+
+  .px-micro { 
+    @apply px-2;
+  }
+}

@@ -1,10 +1,17 @@
-<h1>Posts</h1>
-<% if current_user %>
-  <%= form_for Post.new do |form| %>
-    <%= form.text_area :body, placeholder: "What's happening?" %>
-    <%= form.submit "post" %>
+<div class="px-micro">
+  <h1 class="text-6xl font-medium tracking-tight mb-6">a micro <span class="block">blog</span></h1>
+
+  <div class="mb-6">
+  <% if current_user %>
+    <%= form_for Post.new do |form| %>
+      <%= form.text_area :body, placeholder: "What's happening?" %>
+      <%= form.submit "post" %>
+    <% end %>
+  <% else %>
+    <%= link_to "login to post", new_user_session_path, class: "bg-yellow-300 dark:text-black font-bold px-1" %>
   <% end %>
-<% else %>
-  <%= link_to "Login to post", new_user_session_path %>
-<% end %>
-<%= render @posts %>
+  </div>
+  <div class="space-y-4">
+    <%= render @posts %>
+  </div>
+</div>

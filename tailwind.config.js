@@ -8,6 +8,9 @@ module.exports = {
   ],
   darkMode: "media",
   theme: {
+    fontFamily: {
+      sans: ["Inter", "Helvetica", "Arial", "sans-serif"]
+    },
     extend: {
       colors: {
         grey: colors.gray,
