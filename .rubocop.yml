@@ -1,0 +1,77 @@
+require:
+ - rubocop-performance
+ - rubocop-rails
+ - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.7
+  NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'config.ru'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'lib/assets/**/*'
+    - 'lib/generators/**/templates/*.erb'
+    - 'lib/generators/**/USAGE'
+    - 'lib/tasks/**/*'
+    - 'lib/templates/**/*'
+    - 'node_modules/**/*'
+    - 'Rakefile'
+    - 'Guardfile'
+    - 'script/**/*'
+    - 'spec/factories/**/*'
+    - 'spec/rails_helper.rb'
+    - 'spec/spec_helper.rb'
+Layout/LineLength:
+  Enabled: False
+Lint/MissingSuper:
+  Exclude:
+    - 'app/services/**/*'
+Metrics/BlockLength:
+  CountComments: false
+  Exclude:
+    - 'spec/**/*'
+    - 'app/views/**/*'
+  IgnoredMethods:
+    - 'included'
+    - 'included'
+    - 'context'
+    - 'describe'
+    - 'it'
+    - 'shared_examples'
+    - 'configure'
+    - 'group'
+
+Metrics/ClassLength:
+  Description: 'Avoid classes longer than 100 lines of code.'
+  Max: 100
+  Enabled: true
+
+Metrics/MethodLength:
+  Description: 'Avoid methods longer than 5 lines of code.'
+  StyleGuide: '<https://github.com/bbatsov/ruby-style-guide#short-methods>'
+  Max: 5
+  Enabled: true
+
+Metrics/ParameterLists:
+  Description: 'Pass no more than four parameters into a method.'
+  Max: 4
+Naming/VariableNumber:
+  Enabled: false
+Rails/HasAndBelongsToMany:
+  Enabled: false
+Style/AsciiComments: # Let the man shrug! ¯\_(ツ)_/¯
+  Enabled: False
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/Lambda:
+  EnforcedStyle: literal
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/SymbolArray:
+  Enabled: false
+Style/WordArray:
+  Enabled: false

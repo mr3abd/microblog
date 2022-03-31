@@ -1,0 +1,14 @@
+Description:
+    Adds a roles jsonb column and methods for updating and accessing roles to a model
+    generate with the name of the model and any roles you wish to include.
+
+Example:
+    bin/rails generate roleable user admin sales_rep
+
+    This will create:
+        a database migration adding the roles column
+        methods on the User class so that:
+        `User.update(admin: true, sales_rep:false)`
+        `User.admin # => scope`
+        `user.admin?`
+        all work

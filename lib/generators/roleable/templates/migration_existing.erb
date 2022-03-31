@@ -1,0 +1,9 @@
+class AddRolesTo<%= table_name.camelize %> < ActiveRecord::Migration<%= migration_version %>
+  def self.up
+    add_column :<%= table_name %>, :roles, :jsonb
+  end
+
+  def self.down
+    remove_column :<%= table_name %>, :roles, :jsonb
+  end
+end
