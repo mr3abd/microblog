@@ -33,6 +33,9 @@ gem "bootsnap", ">= 1.4.4", require: false
 # Flexible authentication solution for Rails with Warden (https://github.com/heartcombo/devise)
 gem "devise"
 
+# Easily generate fake data (https://github.com/faker-ruby/faker)
+gem "faker"
+
 # Presenting names of people in full, familiar, abbreviated, and initialized forms (but without titulation etc) (https://github.com/basecamp/name_of_person)
 gem "name_of_person"
 
