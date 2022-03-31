@@ -1,3 +1,10 @@
 <h1>Posts</h1>
-
+<% if current_user %>
+  <%= form_for Post.new do |form| %>
+    <%= form.text_area :body, placeholder: "What's happening?" %>
+    <%= form.submit "post" %>
+  <% end %>
+<% else %>
+  <%= link_to "Login to post", new_user_session_path %>
+<% end %>
 <%= render @posts %>
