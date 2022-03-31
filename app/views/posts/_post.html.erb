@@ -1,0 +1,10 @@
+<div class="flex space-x-2" id="<%= dom_id post %>">
+  <%= icon "user-headset" %>
+  <div class="flex-1">
+    <div class="flex items-center justify-between">
+      <span><%= post.user.name %></span>
+      <span class="text-grey-500 text-sm"><%= time_ago_in_words post.created_at %> ago</span>
+    </div>
+    <p><%= line_breaks post.body %></p>
+  </div>
+</div>
