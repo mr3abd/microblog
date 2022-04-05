@@ -17,6 +17,11 @@
   <body>
     <div class="px-micro max-w-prose mx-auto">
     <%= render "shared/current_user" %>
+    <% if content_for(:title) %>
+      <h1 class="text-6xl font-bold tracking-tight mb-6">
+        <%= yield :title %>
+      </h1>
+    <% end %>
     <%= yield %>
     </div>
   </body>

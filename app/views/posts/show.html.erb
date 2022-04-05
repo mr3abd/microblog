@@ -1,3 +1,8 @@
+<%= content_for :title do %>
+  <%= render "shared/back_link" %>
+  <%= @post.user.name %> said:
+<% end %>
+
 <div class="text-3xl tracking-tight">
   <h2 class="font-bold"><%= @post.user.name %> said:</h2>
   <p><span class="font-black mr-1">&gt;</span> <%= line_breaks @post.body %></p>

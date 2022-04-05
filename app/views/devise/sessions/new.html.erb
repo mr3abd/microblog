@@ -1,4 +1,7 @@
-<h2 class="text-6xl font-medium tracking-tight mb-6 leading-10">log in to<br/> <span class="font-bold">a micro blog</span></h2>
+<%= content_for :title do %>
+<%= link_to "<", root_path, class: "text-yellow-300" %>
+log in to<br/>a micro blog
+<% end %>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
