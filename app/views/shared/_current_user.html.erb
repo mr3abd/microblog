@@ -1,0 +1,8 @@
+<div class="text-right">
+  <% if current_user %>
+    <%= link_to "< logout", destroy_user_session_path, method: :delete, class: "link" %>
+    <span class="font-bold"><%= current_user.name %></span>
+  <% else %>
+    <%= link_to "login >", new_user_session_path, class: "link" %>
+  <% end %>
+</div>
