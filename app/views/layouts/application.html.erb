@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <div class="px-micro">
+    <div class="px-micro max-w-prose mx-auto">
       <% if current_user %>
         Hello <%= current_user.name %>
       <%= link_to "Log out", destroy_user_session_path, method: :delete %>
