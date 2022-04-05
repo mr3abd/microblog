@@ -1,0 +1,7 @@
+<div class="text-3xl tracking-tight">
+  <h2 class="font-bold"><%= @post.user.name %> said:</h2>
+  <p><span class="font-black mr-1">&gt;</span> <%= line_breaks @post.body %></p>
+  <p class="font-light flex flex-col">
+  <span><%= time_ago_in_words @post.created_at %> ago</span>
+  <span>on <%= @post.created_at.to_s(:long) %></span></p>
+</div>

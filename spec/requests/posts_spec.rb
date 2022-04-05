@@ -63,4 +63,15 @@ RSpec.describe "Posts", type: :request do
       end
     end
   end
+
+  describe "GET /posts/:id" do
+    let(:post) { create(:post) }
+    let(:req) { get post_url(post) }
+
+    it "renders successfully" do
+      req
+
+      expect(response).to be_successful
+    end
+  end
 end
