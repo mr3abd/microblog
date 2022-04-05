@@ -10,7 +10,7 @@
   input[type="email"],
   input[type="text"],
   input[type="password"], textarea {
-    @apply border-b-4 border-black bg-slate-100 dark:bg-slate-800;
+    @apply border-b-4 border-black bg-slate-100 dark:bg-slate-800 p-4;
   }
 
   label {
@@ -18,7 +18,7 @@
   }
 }
 
-@layer components { 
+@layer components {
   .button {
     @apply font-bold bg-yellow-300 dark:text-black border-b border-black my-2 p-2 text-lg
   }
@@ -33,11 +33,11 @@
 }
 
 @layer utilities {
-  .mx-micro { 
+  .mx-micro {
     @apply mx-2;
   }
 
-  .px-micro { 
+  .px-micro {
     @apply px-2;
   }
 }
