@@ -33,7 +33,7 @@ PrePush:
     enabled: true
     command: ['rspec']
   Brakeman:
-    enabled: false # TODO: fix Brakeman comments later 
+    enabled: false # TODO: fix Brakeman comments later
 #
 #  TrailingWhitespace:
 #    enabled: true
